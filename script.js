@@ -4,9 +4,9 @@
 
 //  Define arrays
  var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var capital = ("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z");
-var number = ("0", "1", "2", "3", "4", "5", "6", "7", "8", "9");
-var special = ("!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", ",", "-", ".", "/", ":", ";", "<", ">", "?", "[", "]", "_", "`", "|", "{", "}", "~");
+var capital = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var special = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", ",", "-", ".", "/", ":", ";", "<", ">", "?", "[", "]", "_", "`", "|", "{", "}", "~"];
 
 // Define variables used to create random character from each array.
 
@@ -17,7 +17,11 @@ var special = ("!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", ",", "-", 
 // return lowercase[] uses that whole number as the index of the array and returns that value
 var lowRandom = lowercase[Math.floor(Math.random() * lowercase.length)];
 
+var capRandom = capital[Math.floor(Math.random() * capital.length)];
 
+var numRandom = number[Math.floor(Math.random() * number.length)];
+
+var specRandom = special[Math.floor(Math.random() * special.length)];
 
 
 
@@ -36,6 +40,9 @@ var lowRandom = lowercase[Math.floor(Math.random() * lowercase.length)];
 
   //random array value is checked in console 
 console.log(lowRandom);
+console.log(capRandom);
+console.log(numRandom);
+console.log(specRandom);
 
 function generatePassword() {
   alert("password");
