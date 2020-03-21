@@ -40,7 +40,6 @@ function userInput(){
   if (spec) {
     passType = passType.concat(special);
   }
-
  //Have user define password length
   passLength = prompt("How many characters do you want your password to be? Choose a number between 8 and 128.");
 // check to make sure user input is a number between 8 and 128
@@ -49,23 +48,17 @@ function userInput(){
   passLength = prompt("Please enter a number between 8 and 128.");
   
   }
- // once conditions are met will inform user of choice
-  alert("You have chosen a length of " + passLength);
-
 }
 // define passChar array to store randomly generated characters
 var passChar = [];
 
 function generatePassword() {
-
    for (var i = 0; i <= passLength; i++) {
-    
     // Math.random() generates random decimal
     // * passType.length multiplies that decimal by length of array
     // Match.floor() rounds that value down to whole number
     // passChar.push stores the random characters into the passChar array
     passChar.push(passType[Math.floor(Math.random() * passType.length)]);
-
   }
   // returns the array values as a string
   return passChar.join("");
